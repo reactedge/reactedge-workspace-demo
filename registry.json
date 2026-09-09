@@ -15,7 +15,7 @@
   },
   "usp": {
     "active": true,
-    "contract": "editor.json",
+    "contract": "default.json",
     "ssr": {
       "strategy": "static",
       "variants": [
