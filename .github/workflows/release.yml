@@ -40,6 +40,9 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s' "${{ secrets.WIDGET_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
+          
+          # Safe diagnostic: prints only the public-key fingerprint
+          ssh-keygen -lf ~/.ssh/id_ed25519
 
           if [ -z "${{ secrets.WIDGET_SSH_HOST }}" ]; then
             echo "ERROR: WIDGET_SSH_HOST not set"
