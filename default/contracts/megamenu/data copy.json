@@ -1,0 +1,35 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": "12",
+                "label": "Women",
+                "url": "/women",
+                "image": null,
+                "children": [
+                    {
+                        "id": "121",
+                        "label": "Child1",
+                        "url": "/child",
+                        "image": null,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "18",
+                "label": "Men",
+                "url": "/men",
+                "image": null,
+                "children": []
+            },
+            {
+                "id": "25",
+                "label": "Sale",
+                "url": "/sale",
+                "image": null,
+                "children": []
+            }
+        ]
+    }
+}

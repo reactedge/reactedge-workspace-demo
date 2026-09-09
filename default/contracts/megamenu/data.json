@@ -1,0 +1,80 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": "new",
+                "label": "What's New",
+                "url": "/what-is-new.html",
+                "image": null,
+                "children": []
+            },
+            {
+                "id": "women",
+                "label": "Women",
+                "url": "/women.html",
+                "image": null,
+                "children": [
+                    {
+                        "id": "women-child",
+                        "label": "Women Child",
+                        "url": "/women/child.html",
+                        "image": null,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "men",
+                "label": "Men",
+                "url": "/men.html",
+                "image": null,
+                "children": [
+                    {
+                        "id": "men-child",
+                        "label": "Men Child",
+                        "url": "/men/child.html",
+                        "image": null,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "gear",
+                "label": "Gear",
+                "url": "/gear.html",
+                "image": null,
+                "children": [
+                    {
+                        "id": "gear-child",
+                        "label": "Gear Child",
+                        "url": "/gear/child.html",
+                        "image": null,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "training",
+                "label": "Training",
+                "url": "/training.html",
+                "image": null,
+                "children": [
+                    {
+                        "id": "training-child",
+                        "label": "Training Child",
+                        "url": "/training/child.html",
+                        "image": null,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "sale",
+                "label": "Sale",
+                "url": "/sale.html",
+                "image": null,
+                "children": []
+            }
+        ]
+    }
+}
