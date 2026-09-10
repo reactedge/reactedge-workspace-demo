@@ -5,15 +5,34 @@ on:
     tags:
       - 'v*'
   workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version, e.g. v0.1.0"
+        required: true
+        type: string
 
 jobs:
   release:
     runs-on: ubuntu-latest
     environment: reactedge
 
+    env:
+      RELEASE_VERSION: ${{ inputs.version || github.ref_name }}
+      DEPLOY_ROOT: /var/www/docker_mageos
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Validate release version
+        run: |
+          case "$RELEASE_VERSION" in
+            v[0-9]*) ;;
+            *)
+              echo "Release version must start with v, for example v0.1.0"
+              exit 1
+              ;;
+          esac
 
       - name: Setup SSH
         run: |
@@ -28,11 +47,14 @@ jobs:
 
           ssh-keyscan -H "${{ secrets.WIDGET_SSH_HOST }}" >> ~/.ssh/known_hosts
 
-      - name: Sync ReactEdge platform
+      - name: Publish versioned ReactEdge source
         run: |
-          set -x
-          pwd
+          RELEASE_DIR="${DEPLOY_ROOT}/reactedge-${RELEASE_VERSION}"
+          
+          ssh "${{ secrets.WIDGET_SSH_USER }}@${{ secrets.WIDGET_SSH_HOST }}" \
+            "mkdir -p '${RELEASE_DIR}'"
+          
           rsync -avz --delete \
             --exclude ".git" \
             ./ \
-            ${{ secrets.WIDGET_SSH_USER }}@${{ secrets.WIDGET_SSH_HOST }}:/var/www/docker_mageos/reactedge_v0.0.1/
+            "${{ secrets.WIDGET_SSH_USER }}@${{ secrets.WIDGET_SSH_HOST }}:${RELEASE_DIR}/"
