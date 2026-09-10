@@ -30,7 +30,9 @@ jobs:
 
       - name: Sync ReactEdge platform
         run: |
+          set -x
+          pwd
           rsync -avz --delete \
-            --exclude ".git" \            
+            --exclude ".git" \
             ./ \
             ${{ secrets.WIDGET_SSH_USER }}@${{ secrets.WIDGET_SSH_HOST }}:/var/www/docker_mageos/reactedge_v0.0.1/
