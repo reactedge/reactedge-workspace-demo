@@ -58,3 +58,12 @@ jobs:
             --exclude ".git" \
             ./ \
             "${{ secrets.WIDGET_SSH_USER }}@${{ secrets.WIDGET_SSH_HOST }}:${RELEASE_DIR}/"
+
+      - name: Activate release
+        run: |
+          ssh "${{ secrets.WIDGET_SSH_USER }}@${{ secrets.WIDGET_SSH_HOST }}" "
+            set -eu
+            cd '${DEPLOY_ROOT}'
+            ln -s 'reactedge-${RELEASE_VERSION}' reactedge.next
+            mv -Tf reactedge.next reactedge
+          "
