@@ -2,8 +2,7 @@
   "data": {
     "images": [],
     "settings": {
-      "mode": "tile",
-      "maxColumns": 2
+      "mode": "gallery"
     }
   },
   "integration": {
