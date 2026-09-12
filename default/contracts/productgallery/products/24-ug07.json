@@ -1,0 +1,15 @@
+{
+    "key": "24-UG07",
+    "images": [
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/u/g/ug07-bk-0.jpg",
+            "alt": "Image",
+            "role": "base"
+        },
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/u/g/ug07-bk-0_alt1.jpg",
+            "alt": "Image",
+            "role": "base"
+        }
+    ]
+}

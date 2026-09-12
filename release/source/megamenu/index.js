@@ -1,7 +1,7 @@
-import { jsx as p, jsxs as P, Fragment as Ke } from "react/jsx-runtime";
-import { createContext as Ge, useContext as qe, useState as G, useEffect as Xe } from "react";
+import { jsx as p, jsxs as P, Fragment as Ge } from "react/jsx-runtime";
+import { createContext as qe, useContext as Xe, useState as G, useEffect as fe } from "react";
 import { hydrateRoot as Nt, createRoot as Rt } from "react-dom/client";
-var Ze;
+var Se;
 function l(e, t, n) {
   function r(c, a) {
     if (c._zod || Object.defineProperty(c, "_zod", {
@@ -46,10 +46,10 @@ class He extends Error {
     super(`Encountered unidirectional transform during encode: ${t}`), this.name = "ZodEncodeError";
   }
 }
-(Ze = globalThis).__zod_globalConfig ?? (Ze.__zod_globalConfig = {});
-const fe = globalThis.__zod_globalConfig;
+(Se = globalThis).__zod_globalConfig ?? (Se.__zod_globalConfig = {});
+const pe = globalThis.__zod_globalConfig;
 function j(e) {
-  return fe;
+  return pe;
 }
 function Ye(e) {
   const t = Object.values(e).filter((r) => typeof r == "number");
@@ -58,7 +58,7 @@ function Ye(e) {
 function ue(e, t) {
   return typeof t == "bigint" ? t.toString() : t;
 }
-function pe(e) {
+function he(e) {
   return {
     get value() {
       {
@@ -68,20 +68,20 @@ function pe(e) {
     }
   };
 }
-function he(e) {
+function me(e) {
   return e == null;
 }
-function me(e) {
+function ge(e) {
   const t = e.startsWith("^") ? 1 : 0, n = e.endsWith("$") ? e.length - 1 : e.length;
   return e.slice(t, n);
 }
-const Se = /* @__PURE__ */ Symbol("evaluating");
+const Oe = /* @__PURE__ */ Symbol("evaluating");
 function _(e, t, n) {
   let r;
   Object.defineProperty(e, t, {
     get() {
-      if (r !== Se)
-        return r === void 0 && (r = Se, r = n()), r;
+      if (r !== Oe)
+        return r === void 0 && (r = Oe, r = n()), r;
     },
     set(o) {
       Object.defineProperty(e, t, {
@@ -108,7 +108,7 @@ function C(...e) {
   }
   return Object.defineProperties({}, t);
 }
-function Oe(e) {
+function Pe(e) {
   return JSON.stringify(e);
 }
 function Dt(e) {
@@ -119,8 +119,8 @@ const Qe = "captureStackTrace" in Error ? Error.captureStackTrace : (...e) => {
 function Y(e) {
   return typeof e == "object" && e !== null && !Array.isArray(e);
 }
-const Lt = /* @__PURE__ */ pe(() => {
-  if (fe.jitless || typeof navigator < "u" && navigator?.userAgent?.includes("Cloudflare"))
+const Lt = /* @__PURE__ */ he(() => {
+  if (pe.jitless || typeof navigator < "u" && navigator?.userAgent?.includes("Cloudflare"))
     return !1;
   try {
     const e = Function;
@@ -326,7 +326,7 @@ function A(e, t, n) {
   const r = e.message ? e.message : q(e.inst?._zod.def?.error?.(e)) ?? q(t?.error?.(e)) ?? q(n.customError?.(e)) ?? q(n.localeError?.(e)) ?? "Invalid input", { inst: o, continue: i, input: s, ...c } = e;
   return c.path ?? (c.path = []), c.message = r, t?.reportInput && (c.input = s), c;
 }
-function ge(e) {
+function _e(e) {
   return Array.isArray(e) ? "array" : typeof e == "string" ? "string" : "unknown";
 }
 function B(...e) {
@@ -380,7 +380,7 @@ function Xt(e, t = (n) => n.message) {
   };
   return r(e), n;
 }
-const _e = (e) => (t, n, r, o) => {
+const ve = (e) => (t, n, r, o) => {
   const i = r ? { ...r, async: !1 } : { async: !1 }, s = t._zod.run({ value: n, issues: [] }, i);
   if (s instanceof Promise)
     throw new x();
@@ -389,7 +389,7 @@ const _e = (e) => (t, n, r, o) => {
     throw Qe(c, o?.callee), c;
   }
   return s.value;
-}, ve = (e) => async (t, n, r, o) => {
+}, ye = (e) => async (t, n, r, o) => {
   const i = r ? { ...r, async: !0 } : { async: !0 };
   let s = t._zod.run({ value: n, issues: [] }, i);
   if (s instanceof Promise && (s = await s), s.issues.length) {
@@ -414,17 +414,17 @@ const _e = (e) => (t, n, r, o) => {
   } : { success: !0, data: i.value };
 }, Yt = /* @__PURE__ */ se(rt), Qt = (e) => (t, n, r) => {
   const o = r ? { ...r, direction: "backward" } : { direction: "backward" };
-  return _e(e)(t, n, o);
-}, en = (e) => (t, n, r) => _e(e)(t, n, r), tn = (e) => async (t, n, r) => {
-  const o = r ? { ...r, direction: "backward" } : { direction: "backward" };
   return ve(e)(t, n, o);
-}, nn = (e) => async (t, n, r) => ve(e)(t, n, r), rn = (e) => (t, n, r) => {
+}, en = (e) => (t, n, r) => ve(e)(t, n, r), tn = (e) => async (t, n, r) => {
+  const o = r ? { ...r, direction: "backward" } : { direction: "backward" };
+  return ye(e)(t, n, o);
+}, nn = (e) => async (t, n, r) => ye(e)(t, n, r), rn = (e) => (t, n, r) => {
   const o = r ? { ...r, direction: "backward" } : { direction: "backward" };
   return oe(e)(t, n, o);
 }, on = (e) => (t, n, r) => oe(e)(t, n, r), sn = (e) => async (t, n, r) => {
   const o = r ? { ...r, direction: "backward" } : { direction: "backward" };
   return se(e)(t, n, o);
-}, cn = (e) => async (t, n, r) => se(e)(t, n, r), an = /^[cC][0-9a-z]{6,}$/, un = /^[0-9a-z]+$/, ln = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/, dn = /^[0-9a-vA-V]{20}$/, fn = /^[A-Za-z0-9]{27}$/, pn = /^[a-zA-Z0-9_-]{21}$/, hn = /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/, mn = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/, Pe = (e) => e ? new RegExp(`^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${e}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`) : /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/, gn = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/, _n = "^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$";
+}, cn = (e) => async (t, n, r) => se(e)(t, n, r), an = /^[cC][0-9a-z]{6,}$/, un = /^[0-9a-z]+$/, ln = /^[0-9A-HJKMNP-TV-Za-hjkmnp-tv-z]{26}$/, dn = /^[0-9a-vA-V]{20}$/, fn = /^[A-Za-z0-9]{27}$/, pn = /^[a-zA-Z0-9_-]{21}$/, hn = /^P(?:(\d+W)|(?!.*W)(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(?=\d)(\d+H)?(\d+M)?(\d+([.,]\d+)?S)?)?)$/, mn = /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$/, Ee = (e) => e ? new RegExp(`^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-${e}[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$`) : /^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$/, gn = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/, _n = "^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$";
 function vn() {
   return new RegExp(_n, "u");
 }
@@ -452,7 +452,7 @@ const En = (e) => {
   var n;
   T.init(e, t), (n = e._zod.def).when ?? (n.when = (r) => {
     const o = r.value;
-    return !he(o) && o.length !== void 0;
+    return !me(o) && o.length !== void 0;
   }), e._zod.onattach.push((r) => {
     const o = r._zod.bag.maximum ?? Number.POSITIVE_INFINITY;
     t.maximum < o && (r._zod.bag.maximum = t.maximum);
@@ -460,7 +460,7 @@ const En = (e) => {
     const o = r.value;
     if (o.length <= t.maximum)
       return;
-    const s = ge(o);
+    const s = _e(o);
     r.issues.push({
       origin: s,
       code: "too_big",
@@ -475,7 +475,7 @@ const En = (e) => {
   var n;
   T.init(e, t), (n = e._zod.def).when ?? (n.when = (r) => {
     const o = r.value;
-    return !he(o) && o.length !== void 0;
+    return !me(o) && o.length !== void 0;
   }), e._zod.onattach.push((r) => {
     const o = r._zod.bag.minimum ?? Number.NEGATIVE_INFINITY;
     t.minimum > o && (r._zod.bag.minimum = t.minimum);
@@ -483,7 +483,7 @@ const En = (e) => {
     const o = r.value;
     if (o.length >= t.minimum)
       return;
-    const s = ge(o);
+    const s = _e(o);
     r.issues.push({
       origin: s,
       code: "too_small",
@@ -498,7 +498,7 @@ const En = (e) => {
   var n;
   T.init(e, t), (n = e._zod.def).when ?? (n.when = (r) => {
     const o = r.value;
-    return !he(o) && o.length !== void 0;
+    return !me(o) && o.length !== void 0;
   }), e._zod.onattach.push((r) => {
     const o = r._zod.bag;
     o.minimum = t.length, o.maximum = t.length, o.length = t.length;
@@ -506,7 +506,7 @@ const En = (e) => {
     const o = r.value, i = o.length;
     if (i === t.length)
       return;
-    const s = ge(o), c = i > t.length;
+    const s = _e(o), c = i > t.length;
     r.issues.push({
       origin: s,
       ...c ? { code: "too_big", maximum: t.length } : { code: "too_small", minimum: t.length },
@@ -707,7 +707,7 @@ const Wn = {
     vendor: "zod",
     version: 1
   }));
-}), ye = /* @__PURE__ */ l("$ZodString", (e, t) => {
+}), we = /* @__PURE__ */ l("$ZodString", (e, t) => {
   k.init(e, t), e._zod.pattern = [...e?._zod.bag?.patterns ?? []].pop() ?? En(e._zod.bag), e._zod.parse = (n, r) => {
     if (t.coerce)
       try {
@@ -722,7 +722,7 @@ const Wn = {
     }), n;
   };
 }), y = /* @__PURE__ */ l("$ZodStringFormat", (e, t) => {
-  ie.init(e, t), ye.init(e, t);
+  ie.init(e, t), we.init(e, t);
 }), Vn = /* @__PURE__ */ l("$ZodGUID", (e, t) => {
   t.pattern ?? (t.pattern = mn), y.init(e, t);
 }), Bn = /* @__PURE__ */ l("$ZodUUID", (e, t) => {
@@ -739,9 +739,9 @@ const Wn = {
     }[t.version];
     if (r === void 0)
       throw new Error(`Invalid UUID version: "${t.version}"`);
-    t.pattern ?? (t.pattern = Pe(r));
+    t.pattern ?? (t.pattern = Ee(r));
   } else
-    t.pattern ?? (t.pattern = Pe());
+    t.pattern ?? (t.pattern = Ee());
   y.init(e, t);
 }), Kn = /* @__PURE__ */ l("$ZodEmail", (e, t) => {
   t.pattern ?? (t.pattern = gn), y.init(e, t);
@@ -930,7 +930,7 @@ const mr = /* @__PURE__ */ l("$ZodJWT", (e, t) => {
     inst: e
   }), n);
 });
-function Ee(e, t, n) {
+function Ie(e, t, n) {
   e.issues.length && t.issues.push(...U(n, e.issues)), t.value[n] = e.value;
 }
 const vr = /* @__PURE__ */ l("$ZodArray", (e, t) => {
@@ -950,7 +950,7 @@ const vr = /* @__PURE__ */ l("$ZodArray", (e, t) => {
         value: c,
         issues: []
       }, r);
-      a instanceof Promise ? i.push(a.then((u) => Ee(u, n, s))) : Ee(a, n, s);
+      a instanceof Promise ? i.push(a.then((u) => Ie(u, n, s))) : Ie(a, n, s);
     }
     return i.length ? Promise.all(i).then(() => n) : n;
   };
@@ -1018,7 +1018,7 @@ const yr = /* @__PURE__ */ l("$ZodObject", (e, t) => {
       }
     });
   }
-  const r = pe(() => at(t));
+  const r = he(() => at(t));
   _(e._zod, "propValues", () => {
     const c = t.shape, a = {};
     for (const u in c) {
@@ -1053,9 +1053,9 @@ const yr = /* @__PURE__ */ l("$ZodObject", (e, t) => {
   };
 }), wr = /* @__PURE__ */ l("$ZodObjectJIT", (e, t) => {
   yr.init(e, t);
-  const n = e._zod.parse, r = pe(() => at(t)), o = (m) => {
+  const n = e._zod.parse, r = he(() => at(t)), o = (m) => {
     const h = new Mn(["shape", "payload", "ctx"]), v = r.value, W = (I) => {
-      const z = Oe(I);
+      const z = Pe(I);
       return `shape[${z}]._zod.run({ value: input[${z}], issues: [] }, ctx)`;
     };
     h.write("const input = payload.value;");
@@ -1065,8 +1065,8 @@ const yr = /* @__PURE__ */ l("$ZodObject", (e, t) => {
       Z[I] = `key_${ae++}`;
     h.write("const newResult = {};");
     for (const I of v.keys) {
-      const z = Z[I], S = Oe(I), ke = m[I], $e = ke?._zod?.optin === "optional", Ct = ke?._zod?.optout === "optional";
-      h.write(`const ${z} = ${W(I)};`), $e && Ct ? h.write(`
+      const z = Z[I], S = Pe(I), $e = m[I], Ze = $e?._zod?.optin === "optional", Ct = $e?._zod?.optout === "optional";
+      h.write(`const ${z} = ${W(I)};`), Ze && Ct ? h.write(`
         if (${z}.issues.length) {
           if (${S} in input) {
             payload.issues = payload.issues.concat(${z}.issues.map(iss => ({
@@ -1084,7 +1084,7 @@ const yr = /* @__PURE__ */ l("$ZodObject", (e, t) => {
           newResult[${S}] = ${z}.value;
         }
         
-      `) : $e ? h.write(`
+      `) : Ze ? h.write(`
         if (${z}.issues.length) {
           payload.issues = payload.issues.concat(${z}.issues.map(iss => ({
             ...iss,
@@ -1132,7 +1132,7 @@ const yr = /* @__PURE__ */ l("$ZodObject", (e, t) => {
     return (I, z) => At(m, I, z);
   };
   let i;
-  const s = Y, c = !fe.jitless, u = c && Lt.value, d = t.catchall;
+  const s = Y, c = !pe.jitless, u = c && Lt.value, d = t.catchall;
   let f;
   e._zod.parse = (m, h) => {
     f ?? (f = r.value);
@@ -1145,7 +1145,7 @@ const yr = /* @__PURE__ */ l("$ZodObject", (e, t) => {
     }), m);
   };
 });
-function Ie(e, t, n, r) {
+function Te(e, t, n, r) {
   for (const i of e)
     if (i.issues.length === 0)
       return t.value = i.value, t;
@@ -1164,7 +1164,7 @@ const zr = /* @__PURE__ */ l("$ZodUnion", (e, t) => {
   }), _(e._zod, "pattern", () => {
     if (t.options.every((r) => r._zod.pattern)) {
       const r = t.options.map((o) => o._zod.pattern);
-      return new RegExp(`^(${r.map((o) => me(o.source)).join("|")})$`);
+      return new RegExp(`^(${r.map((o) => ge(o.source)).join("|")})$`);
     }
   });
   const n = t.options.length === 1 ? t.options[0]._zod.run : null;
@@ -1186,12 +1186,12 @@ const zr = /* @__PURE__ */ l("$ZodUnion", (e, t) => {
         s.push(a);
       }
     }
-    return i ? Promise.all(s).then((c) => Ie(c, r, e, o)) : Ie(s, r, e, o);
+    return i ? Promise.all(s).then((c) => Te(c, r, e, o)) : Te(s, r, e, o);
   };
 }), br = /* @__PURE__ */ l("$ZodIntersection", (e, t) => {
   k.init(e, t), e._zod.parse = (n, r) => {
     const o = n.value, i = t.left._zod.run({ value: o, issues: [] }, r), s = t.right._zod.run({ value: o, issues: [] }, r);
-    return i instanceof Promise || s instanceof Promise ? Promise.all([i, s]).then(([a, u]) => Te(n, a, u)) : Te(n, i, s);
+    return i instanceof Promise || s instanceof Promise ? Promise.all([i, s]).then(([a, u]) => je(n, a, u)) : je(n, i, s);
   };
 });
 function le(e, t) {
@@ -1229,7 +1229,7 @@ function le(e, t) {
   }
   return { valid: !1, mergeErrorPath: [] };
 }
-function Te(e, t, n) {
+function je(e, t, n) {
   const r = /* @__PURE__ */ new Map();
   let o;
   for (const c of t.issues)
@@ -1355,17 +1355,17 @@ const kr = /* @__PURE__ */ l("$ZodRecord", (e, t) => {
     return n.value = o, n.fallback = !0, n;
   };
 });
-function je(e, t) {
+function Ae(e, t) {
   return t === void 0 && (e.issues.length || e.fallback) ? { issues: [], value: void 0 } : e;
 }
 const lt = /* @__PURE__ */ l("$ZodOptional", (e, t) => {
   k.init(e, t), e._zod.optin = "optional", e._zod.optout = "optional", _(e._zod, "values", () => t.innerType._zod.values ? /* @__PURE__ */ new Set([...t.innerType._zod.values, void 0]) : void 0), _(e._zod, "pattern", () => {
     const n = t.innerType._zod.pattern;
-    return n ? new RegExp(`^(${me(n.source)})?$`) : void 0;
+    return n ? new RegExp(`^(${ge(n.source)})?$`) : void 0;
   }), e._zod.parse = (n, r) => {
     if (t.innerType._zod.optin === "optional") {
       const o = n.value, i = t.innerType._zod.run(n, r);
-      return i instanceof Promise ? i.then((s) => je(s, o)) : je(i, o);
+      return i instanceof Promise ? i.then((s) => Ae(s, o)) : Ae(i, o);
     }
     return n.value === void 0 ? n : t.innerType._zod.run(n, r);
   };
@@ -1374,7 +1374,7 @@ const lt = /* @__PURE__ */ l("$ZodOptional", (e, t) => {
 }), Or = /* @__PURE__ */ l("$ZodNullable", (e, t) => {
   k.init(e, t), _(e._zod, "optin", () => t.innerType._zod.optin), _(e._zod, "optout", () => t.innerType._zod.optout), _(e._zod, "pattern", () => {
     const n = t.innerType._zod.pattern;
-    return n ? new RegExp(`^(${me(n.source)}|null)$`) : void 0;
+    return n ? new RegExp(`^(${ge(n.source)}|null)$`) : void 0;
   }), _(e._zod, "values", () => t.innerType._zod.values ? /* @__PURE__ */ new Set([...t.innerType._zod.values, null]) : void 0), e._zod.parse = (n, r) => n.value === null ? n : t.innerType._zod.run(n, r);
 }), Pr = /* @__PURE__ */ l("$ZodDefault", (e, t) => {
   k.init(e, t), e._zod.optin = "optional", _(e._zod, "values", () => t.innerType._zod.values), e._zod.parse = (n, r) => {
@@ -1383,10 +1383,10 @@ const lt = /* @__PURE__ */ l("$ZodOptional", (e, t) => {
     if (n.value === void 0)
       return n.value = t.defaultValue, n;
     const o = t.innerType._zod.run(n, r);
-    return o instanceof Promise ? o.then((i) => Ae(i, t)) : Ae(o, t);
+    return o instanceof Promise ? o.then((i) => Ce(i, t)) : Ce(o, t);
   };
 });
-function Ae(e, t) {
+function Ce(e, t) {
   return e.value === void 0 && (e.value = t.defaultValue), e;
 }
 const Er = /* @__PURE__ */ l("$ZodPrefault", (e, t) => {
@@ -1397,10 +1397,10 @@ const Er = /* @__PURE__ */ l("$ZodPrefault", (e, t) => {
     return n ? new Set([...n].filter((r) => r !== void 0)) : void 0;
   }), e._zod.parse = (n, r) => {
     const o = t.innerType._zod.run(n, r);
-    return o instanceof Promise ? o.then((i) => Ce(i, e)) : Ce(o, e);
+    return o instanceof Promise ? o.then((i) => Ne(i, e)) : Ne(o, e);
   };
 });
-function Ce(e, t) {
+function Ne(e, t) {
   return !e.issues.length && e.value === void 0 && e.issues.push({
     code: "invalid_type",
     expected: "nonoptional",
@@ -1445,10 +1445,10 @@ const Ar = /* @__PURE__ */ l("$ZodReadonly", (e, t) => {
     if (r.direction === "backward")
       return t.innerType._zod.run(n, r);
     const o = t.innerType._zod.run(n, r);
-    return o instanceof Promise ? o.then(Ne) : Ne(o);
+    return o instanceof Promise ? o.then(Re) : Re(o);
   };
 });
-function Ne(e) {
+function Re(e) {
   return e.value = Object.freeze(e.value), e;
 }
 const Cr = /* @__PURE__ */ l("$ZodLazy", (e, t) => {
@@ -1460,11 +1460,11 @@ const Cr = /* @__PURE__ */ l("$ZodLazy", (e, t) => {
   T.init(e, t), k.init(e, t), e._zod.parse = (n, r) => n, e._zod.check = (n) => {
     const r = n.value, o = t.fn(r);
     if (o instanceof Promise)
-      return o.then((i) => Re(i, n, r, e));
-    Re(o, n, r, e);
+      return o.then((i) => De(i, n, r, e));
+    De(o, n, r, e);
   };
 });
-function Re(e, t, n, r) {
+function De(e, t, n, r) {
   if (!e) {
     const o = {
       code: "custom",
@@ -1479,7 +1479,7 @@ function Re(e, t, n, r) {
     r._zod.def.params && (o.params = r._zod.def.params), t.issues.push(B(o));
   }
 }
-var De;
+var Le;
 class Rr {
   constructor() {
     this._map = /* @__PURE__ */ new WeakMap(), this._idmap = /* @__PURE__ */ new Map();
@@ -1512,7 +1512,7 @@ class Rr {
 function Dr() {
   return new Rr();
 }
-(De = globalThis).__zod_globalRegistry ?? (De.__zod_globalRegistry = Dr());
+(Le = globalThis).__zod_globalRegistry ?? (Le.__zod_globalRegistry = Dr());
 const V = globalThis.__zod_globalRegistry;
 // @__NO_SIDE_EFFECTS__
 function Lr(e, t) {
@@ -1532,7 +1532,7 @@ function Ur(e, t) {
   });
 }
 // @__NO_SIDE_EFFECTS__
-function Le(e, t) {
+function Ue(e, t) {
   return new e({
     type: "string",
     format: "guid",
@@ -2378,11 +2378,11 @@ const rs = (e, t) => {
   });
 }, E = /* @__PURE__ */ l("ZodError", rs, {
   Parent: Error
-}), os = /* @__PURE__ */ _e(E), ss = /* @__PURE__ */ ve(E), is = /* @__PURE__ */ oe(E), cs = /* @__PURE__ */ se(E), as = /* @__PURE__ */ Qt(E), us = /* @__PURE__ */ en(E), ls = /* @__PURE__ */ tn(E), ds = /* @__PURE__ */ nn(E), fs = /* @__PURE__ */ rn(E), ps = /* @__PURE__ */ on(E), hs = /* @__PURE__ */ sn(E), ms = /* @__PURE__ */ cn(E), Ue = /* @__PURE__ */ new WeakMap();
+}), os = /* @__PURE__ */ ve(E), ss = /* @__PURE__ */ ye(E), is = /* @__PURE__ */ oe(E), cs = /* @__PURE__ */ se(E), as = /* @__PURE__ */ Qt(E), us = /* @__PURE__ */ en(E), ls = /* @__PURE__ */ tn(E), ds = /* @__PURE__ */ nn(E), fs = /* @__PURE__ */ rn(E), ps = /* @__PURE__ */ on(E), hs = /* @__PURE__ */ sn(E), ms = /* @__PURE__ */ cn(E), xe = /* @__PURE__ */ new WeakMap();
 function ce(e, t, n) {
   const r = Object.getPrototypeOf(e);
-  let o = Ue.get(r);
-  if (o || (o = /* @__PURE__ */ new Set(), Ue.set(r, o)), !o.has(t)) {
+  let o = xe.get(r);
+  if (o || (o = /* @__PURE__ */ new Set(), xe.set(r, o)), !o.has(t)) {
     o.add(t);
     for (const i in n) {
       const s = n[i];
@@ -2447,22 +2447,22 @@ const $ = /* @__PURE__ */ l("ZodType", (e, t) => (k.init(e, t), Object.assign(e[
     return this.check(/* @__PURE__ */ M(n));
   },
   optional() {
-    return Me(this);
+    return We(this);
   },
   exactOptional() {
     return Ks(this);
   },
   nullable() {
-    return We(this);
+    return Ve(this);
   },
   nullish() {
-    return Me(We(this));
+    return We(Ve(this));
   },
   nonoptional(n) {
     return Qs(this, n);
   },
   array() {
-    return we(this);
+    return ze(this);
   },
   or(n) {
     return xs([this, n]);
@@ -2471,7 +2471,7 @@ const $ = /* @__PURE__ */ l("ZodType", (e, t) => (k.init(e, t), Object.assign(e[
     return Fs(this, n);
   },
   transform(n) {
-    return Ve(this, Vs(n));
+    return Be(this, Vs(n));
   },
   default(n) {
     return Xs(this, n);
@@ -2483,7 +2483,7 @@ const $ = /* @__PURE__ */ l("ZodType", (e, t) => (k.init(e, t), Object.assign(e[
     return ti(this, n);
   },
   pipe(n) {
-    return Ve(this, n);
+    return Be(this, n);
   },
   readonly() {
     return oi(this);
@@ -2513,7 +2513,7 @@ const $ = /* @__PURE__ */ l("ZodType", (e, t) => (k.init(e, t), Object.assign(e[
   },
   configurable: !0
 }), e)), _t = /* @__PURE__ */ l("_ZodString", (e, t) => {
-  ye.init(e, t), $.init(e, t), e._zod.processJSONSchema = (r, o, i) => Io(e, r, o);
+  we.init(e, t), $.init(e, t), e._zod.processJSONSchema = (r, o, i) => Io(e, r, o);
   const n = e._zod.bag;
   e.format = n.format ?? null, e.minLength = n.minimum ?? null, e.maxLength = n.maximum ?? null, ce(e, "_ZodString", {
     regex(...r) {
@@ -2563,7 +2563,7 @@ const $ = /* @__PURE__ */ l("ZodType", (e, t) => (k.init(e, t), Object.assign(e[
     }
   });
 }), gs = /* @__PURE__ */ l("ZodString", (e, t) => {
-  ye.init(e, t), _t.init(e, t), e.email = (n) => e.check(/* @__PURE__ */ Ur(_s, n)), e.url = (n) => e.check(/* @__PURE__ */ Wr(vs, n)), e.jwt = (n) => e.check(/* @__PURE__ */ so(As, n)), e.emoji = (n) => e.check(/* @__PURE__ */ Vr(ys, n)), e.guid = (n) => e.check(/* @__PURE__ */ Le(xe, n)), e.uuid = (n) => e.check(/* @__PURE__ */ xr(H, n)), e.uuidv4 = (n) => e.check(/* @__PURE__ */ Jr(H, n)), e.uuidv6 = (n) => e.check(/* @__PURE__ */ Fr(H, n)), e.uuidv7 = (n) => e.check(/* @__PURE__ */ Mr(H, n)), e.nanoid = (n) => e.check(/* @__PURE__ */ Br(ws, n)), e.guid = (n) => e.check(/* @__PURE__ */ Le(xe, n)), e.cuid = (n) => e.check(/* @__PURE__ */ Kr(zs, n)), e.cuid2 = (n) => e.check(/* @__PURE__ */ Gr(bs, n)), e.ulid = (n) => e.check(/* @__PURE__ */ qr(ks, n)), e.base64 = (n) => e.check(/* @__PURE__ */ no(Is, n)), e.base64url = (n) => e.check(/* @__PURE__ */ ro(Ts, n)), e.xid = (n) => e.check(/* @__PURE__ */ Xr($s, n)), e.ksuid = (n) => e.check(/* @__PURE__ */ Hr(Zs, n)), e.ipv4 = (n) => e.check(/* @__PURE__ */ Yr(Ss, n)), e.ipv6 = (n) => e.check(/* @__PURE__ */ Qr(Os, n)), e.cidrv4 = (n) => e.check(/* @__PURE__ */ eo(Ps, n)), e.cidrv6 = (n) => e.check(/* @__PURE__ */ to(Es, n)), e.e164 = (n) => e.check(/* @__PURE__ */ oo(js, n)), e.datetime = (n) => e.check(Xo(n)), e.date = (n) => e.check(Yo(n)), e.time = (n) => e.check(es(n)), e.duration = (n) => e.check(ns(n));
+  we.init(e, t), _t.init(e, t), e.email = (n) => e.check(/* @__PURE__ */ Ur(_s, n)), e.url = (n) => e.check(/* @__PURE__ */ Wr(vs, n)), e.jwt = (n) => e.check(/* @__PURE__ */ so(As, n)), e.emoji = (n) => e.check(/* @__PURE__ */ Vr(ys, n)), e.guid = (n) => e.check(/* @__PURE__ */ Ue(Je, n)), e.uuid = (n) => e.check(/* @__PURE__ */ xr(H, n)), e.uuidv4 = (n) => e.check(/* @__PURE__ */ Jr(H, n)), e.uuidv6 = (n) => e.check(/* @__PURE__ */ Fr(H, n)), e.uuidv7 = (n) => e.check(/* @__PURE__ */ Mr(H, n)), e.nanoid = (n) => e.check(/* @__PURE__ */ Br(ws, n)), e.guid = (n) => e.check(/* @__PURE__ */ Ue(Je, n)), e.cuid = (n) => e.check(/* @__PURE__ */ Kr(zs, n)), e.cuid2 = (n) => e.check(/* @__PURE__ */ Gr(bs, n)), e.ulid = (n) => e.check(/* @__PURE__ */ qr(ks, n)), e.base64 = (n) => e.check(/* @__PURE__ */ no(Is, n)), e.base64url = (n) => e.check(/* @__PURE__ */ ro(Ts, n)), e.xid = (n) => e.check(/* @__PURE__ */ Xr($s, n)), e.ksuid = (n) => e.check(/* @__PURE__ */ Hr(Zs, n)), e.ipv4 = (n) => e.check(/* @__PURE__ */ Yr(Ss, n)), e.ipv6 = (n) => e.check(/* @__PURE__ */ Qr(Os, n)), e.cidrv4 = (n) => e.check(/* @__PURE__ */ eo(Ps, n)), e.cidrv6 = (n) => e.check(/* @__PURE__ */ to(Es, n)), e.e164 = (n) => e.check(/* @__PURE__ */ oo(js, n)), e.datetime = (n) => e.check(Xo(n)), e.date = (n) => e.check(Yo(n)), e.time = (n) => e.check(es(n)), e.duration = (n) => e.check(ns(n));
 });
 function R(e) {
   return /* @__PURE__ */ Lr(gs, e);
@@ -2572,7 +2572,7 @@ const w = /* @__PURE__ */ l("ZodStringFormat", (e, t) => {
   y.init(e, t), _t.init(e, t);
 }), _s = /* @__PURE__ */ l("ZodEmail", (e, t) => {
   Kn.init(e, t), w.init(e, t);
-}), xe = /* @__PURE__ */ l("ZodGUID", (e, t) => {
+}), Je = /* @__PURE__ */ l("ZodGUID", (e, t) => {
   Vn.init(e, t), w.init(e, t);
 }), H = /* @__PURE__ */ l("ZodUUID", (e, t) => {
   Bn.init(e, t), w.init(e, t);
@@ -2611,7 +2611,7 @@ const w = /* @__PURE__ */ l("ZodStringFormat", (e, t) => {
 }), Cs = /* @__PURE__ */ l("ZodUnknown", (e, t) => {
   gr.init(e, t), $.init(e, t), e._zod.processJSONSchema = (n, r, o) => jo();
 });
-function Je() {
+function Fe() {
   return /* @__PURE__ */ lo(Cs);
 }
 const Ns = /* @__PURE__ */ l("ZodNever", (e, t) => {
@@ -2639,7 +2639,7 @@ const Ds = /* @__PURE__ */ l("ZodArray", (e, t) => {
     }
   });
 });
-function we(e, t) {
+function ze(e, t) {
   return /* @__PURE__ */ $o(Ds, e, t);
 }
 const Ls = /* @__PURE__ */ l("ZodObject", (e, t) => {
@@ -2651,10 +2651,10 @@ const Ls = /* @__PURE__ */ l("ZodObject", (e, t) => {
       return this.clone({ ...this._zod.def, catchall: n });
     },
     passthrough() {
-      return this.clone({ ...this._zod.def, catchall: Je() });
+      return this.clone({ ...this._zod.def, catchall: Fe() });
     },
     loose() {
-      return this.clone({ ...this._zod.def, catchall: Je() });
+      return this.clone({ ...this._zod.def, catchall: Fe() });
     },
     strict() {
       return this.clone({ ...this._zod.def, catchall: Rs() });
@@ -2713,16 +2713,16 @@ function Fs(e, t) {
     right: t
   });
 }
-const Fe = /* @__PURE__ */ l("ZodRecord", (e, t) => {
+const Me = /* @__PURE__ */ l("ZodRecord", (e, t) => {
   kr.init(e, t), $.init(e, t), e._zod.processJSONSchema = (n, r, o) => xo(e, n, r, o), e.keyType = t.keyType, e.valueType = t.valueType;
 });
 function Ms(e, t, n) {
-  return !t || !t._zod ? new Fe({
+  return !t || !t._zod ? new Me({
     type: "record",
     keyType: R(),
     valueType: e,
     ...g(t)
-  }) : new Fe({
+  }) : new Me({
     type: "record",
     keyType: e,
     valueType: t,
@@ -2793,7 +2793,7 @@ function Vs(e) {
 const vt = /* @__PURE__ */ l("ZodOptional", (e, t) => {
   lt.init(e, t), $.init(e, t), e._zod.processJSONSchema = (n, r, o) => gt(e, n, r, o), e.unwrap = () => e._zod.def.innerType;
 });
-function Me(e) {
+function We(e) {
   return new vt({
     type: "optional",
     innerType: e
@@ -2811,7 +2811,7 @@ function Ks(e) {
 const Gs = /* @__PURE__ */ l("ZodNullable", (e, t) => {
   Or.init(e, t), $.init(e, t), e._zod.processJSONSchema = (n, r, o) => Jo(e, n, r, o), e.unwrap = () => e._zod.def.innerType;
 });
-function We(e) {
+function Ve(e) {
   return new Gs({
     type: "nullable",
     innerType: e
@@ -2864,7 +2864,7 @@ function ti(e, t) {
 const ni = /* @__PURE__ */ l("ZodPipe", (e, t) => {
   jr.init(e, t), $.init(e, t), e._zod.processJSONSchema = (n, r, o) => Bo(e, n, r, o), e.in = t.in, e.out = t.out;
 });
-function Ve(e, t) {
+function Be(e, t) {
   return new ni({
     type: "pipe",
     in: e,
@@ -2914,7 +2914,7 @@ const li = J({
     label: R(),
     url: R(),
     image: R().nullable().optional().default(null),
-    children: we(
+    children: ze(
       wt
     ),
     meta: J({
@@ -2924,7 +2924,7 @@ const li = J({
   }).strict()
 ), di = J({
   data: J({
-    items: we(
+    items: ze(
       wt
     )
   }).strict(),
@@ -2935,7 +2935,7 @@ const li = J({
 function fi(e) {
   return di.parse(e);
 }
-const ze = "megamenu";
+const be = "megamenu";
 function zt(e, t) {
   try {
     const n = fi(e), r = pi(n);
@@ -2965,11 +2965,11 @@ function pi(e) {
     }
   };
 }
-const bt = Ge(void 0);
+const bt = qe(void 0);
 function hi() {
   if (typeof window > "u")
     return [];
-  const t = new URLSearchParams(window.location.search).get("re-debug");
+  const t = new URLSearchParams(window.location.search).get("reactedge_debug");
   return t ? t === "1" || t === "all" ? ["all"] : t.split(",").map((n) => n.trim().toLowerCase()) : null;
 }
 class mi {
@@ -3007,6 +3007,22 @@ class mi {
       for (const [r, o] of Object.entries(n))
         console.debug(`${r}:`, o);
   }
+  ready() {
+    const t = "widget-ready", n = {
+      widget: this.widgetId,
+      instance: this.instance ?? this.widgetId,
+      phase: t,
+      message: "The widget is now ready to take over the SSR",
+      level: "info",
+      data: null,
+      ts: Date.now()
+    };
+    if (this.isEnabled()) {
+      const r = `[${this.widgetId}] ${t}`;
+      console.log(r, n);
+    }
+    this.dispatchActivityEvent(n);
+  }
   dispatchActivityEvent(t) {
     typeof window > "u" || window.dispatchEvent(
       new CustomEvent(
@@ -3032,7 +3048,7 @@ const gi = bt.Provider, _i = ({
   children: e,
   hostElement: t
 }) => {
-  const n = t ?? document.documentElement, r = new mi(ze, n.dataset.instance);
+  const n = t ?? document.documentElement, r = new mi(be, n.dataset.instance);
   return /* @__PURE__ */ p(
     gi,
     {
@@ -3042,7 +3058,7 @@ const gi = bt.Provider, _i = ({
   );
 };
 function vi() {
-  const e = qe(bt);
+  const e = Xe(bt);
   if (!e)
     throw new Error("useInstanceState must be used within InstanceStateProvider");
   return e;
@@ -3051,12 +3067,12 @@ function yi(e) {
   const [t, n] = G(
     () => typeof window < "u" ? window.matchMedia(e).matches : !1
   );
-  return Xe(() => {
+  return fe(() => {
     const r = window.matchMedia(e), o = () => n(r.matches);
     return r.addEventListener("change", o), () => r.removeEventListener("change", o);
   }, [e]), t;
 }
-const kt = Ge(void 0), wi = kt.Provider, $t = ({ children: e, settings: t }) => {
+const kt = qe(void 0), wi = kt.Provider, $t = ({ children: e, settings: t }) => {
   const [n] = G({
     settings: t
   });
@@ -3081,7 +3097,7 @@ const kt = Ge(void 0), wi = kt.Provider, $t = ({ children: e, settings: t }) => 
   borderRadius: "50%",
   animation: "spin 0.8s linear infinite"
 };
-function be() {
+function ke() {
   return /* @__PURE__ */ p("div", { style: zi, children: /* @__PURE__ */ p("div", { style: bi }) });
 }
 function Zt(e, t) {
@@ -3098,7 +3114,7 @@ function St(e, t) {
     (o) => o.children && o.children.length > 0
   ) ? "complex" : t === "tiles" ? "simple-tiles" : "simple-list";
 }
-function Be(e, t) {
+function Ke(e, t) {
   try {
     const n = t ?? "http://localhost", r = new URL(e, n);
     return t && r.origin, /^https?:/.test(e) ? e : (r.pathname.replace(/\/+$/, "") || "/") + r.search + r.hash;
@@ -3107,7 +3123,10 @@ function Be(e, t) {
   }
 }
 function Ot(e, t) {
-  return !e || e === "#" || e.startsWith("#") ? !1 : Be(e) === Be("http://localhost");
+  if (!e || e === "#" || e.startsWith("#"))
+    return !1;
+  const n = typeof window < "u" ? window.location.href : void 0;
+  return n === void 0 ? !1 : Ke(e) === Ke(n);
 }
 function Pt(e) {
   return e.children.some(
@@ -3126,14 +3145,14 @@ function ki({
     "span",
     {
       className: [
-        "mw-parent-label",
+        "parent-label",
         t && "is-active",
         r && "is-breadcrumb",
         n && "has-submenu"
       ].filter(Boolean).join(" "),
       children: [
         e.label,
-        n && /* @__PURE__ */ p("span", { className: "mw-parent-arrow", "aria-hidden": "true", children: "▼" })
+        n && /* @__PURE__ */ p("span", { className: "parent-arrow", "aria-hidden": "true", children: "▼" })
       ]
     }
   );
@@ -3141,16 +3160,16 @@ function ki({
     "a",
     {
       href: e.url,
-      className: "mw-parent-link",
+      className: "parent-link",
       children: o
     }
-  ) : /* @__PURE__ */ p("div", { className: "mw-parent-item", children: o });
+  ) : /* @__PURE__ */ p("div", { className: "parent-item", children: o });
 }
 const $i = ({ url: e, label: t, isInBreadcrumb: n }) => /* @__PURE__ */ p(
   "a",
   {
     href: e,
-    className: `mw-link ${n ? "in-breadcrumb" : ""}`,
+    className: `link${n ? " in-breadcrumb" : ""}`,
     children: t
   }
 );
@@ -3178,13 +3197,13 @@ function Si({ url: e, label: t, icon: n }) {
     "a",
     {
       href: e,
-      className: "mw-cta-link",
+      className: "cta-link",
       children: [
-        /* @__PURE__ */ p("span", { className: "mw-cta-link__label", children: t }),
+        /* @__PURE__ */ p("span", { className: "cta-link__label", children: t }),
         n && /* @__PURE__ */ p(
           "span",
           {
-            className: "mw-cta-link__icon",
+            className: "cta-link__icon",
             "aria-hidden": "true",
             children: n && Zi(n)
           }
@@ -3202,17 +3221,17 @@ function It({ item: e }) {
     "a",
     {
       href: e.url,
-      className: "mw-menu-tile",
+      className: "menu-tile",
       children: [
         e.image && /* @__PURE__ */ p(
           "img",
           {
             src: e.image,
             alt: e.label,
-            className: "mw-menu-tile__image"
+            className: "menu-tile__image"
           }
         ),
-        /* @__PURE__ */ p("span", { className: "mw-menu-tile__label", children: e.label })
+        /* @__PURE__ */ p("span", { className: "menu-tile__label", children: e.label })
       ]
     }
   );
@@ -3232,7 +3251,7 @@ function Tt({ label: e, children: t }) {
 }
 function Oi({ items: e, loading: t = !1, theme: n }) {
   const [r, o] = G(null);
-  return t ? /* @__PURE__ */ p(be, {}) : /* @__PURE__ */ p("div", { className: "megamenu", children: e && e.map((i) => {
+  return t ? /* @__PURE__ */ p(ke, {}) : /* @__PURE__ */ p("div", { className: "megamenu", children: e && e.map((i) => {
     const s = r === i.id, c = Zt(i.url, n), a = St(i, c), u = a !== "none";
     return /* @__PURE__ */ P(
       "div",
@@ -3276,14 +3295,14 @@ const Pi = ({
   isOpen: e,
   onClose: t,
   children: n
-}) => (Xe(() => {
+}) => (fe(() => {
   const r = (o) => {
     o.key === "Escape" && t();
   };
   return e && document.addEventListener("keydown", r), () => {
     document.removeEventListener("keydown", r);
   };
-}, [e, t]), /* @__PURE__ */ P(Ke, { children: [
+}, [e, t]), /* @__PURE__ */ P(Ge, { children: [
   /* @__PURE__ */ p(
     "div",
     {
@@ -3300,14 +3319,14 @@ const Pi = ({
   )
 ] }));
 function Ei() {
-  const e = qe(kt);
+  const e = Xe(kt);
   if (!e)
     throw new Error("useConfigState must be used within ConfigStateProvider");
   return e;
 }
 function jt({ items: e, loading: t = !1 }) {
   const [n, r] = G(null), { settings: o } = Ei();
-  return t || e && !e.length ? /* @__PURE__ */ p(be, {}) : /* @__PURE__ */ p("div", { className: "megamenu", children: e && e.map((i) => {
+  return t || e && !e.length ? /* @__PURE__ */ p(ke, {}) : /* @__PURE__ */ p("div", { className: "megamenu", children: e && e.map((i) => {
     const s = n === i.id, c = Zt(i.url, o), a = St(i, c), u = a !== "none";
     return /* @__PURE__ */ P(
       "div",
@@ -3348,7 +3367,7 @@ function jt({ items: e, loading: t = !1 }) {
 }
 function Ii({ items: e, loading: t = !1, theme: n }) {
   const [r, o] = G(!1);
-  return t || e && !e.length ? /* @__PURE__ */ p(be, {}) : /* @__PURE__ */ P(Ke, { children: [
+  return t || e && !e.length ? /* @__PURE__ */ p(ke, {}) : /* @__PURE__ */ P(Ge, { children: [
     /* @__PURE__ */ p(
       "button",
       {
@@ -3371,7 +3390,9 @@ function Ii({ items: e, loading: t = !1, theme: n }) {
 }
 function Ti({ contract: e }) {
   const t = vi(), n = zt(e, t), r = yi("(max-width: 768px)");
-  return n ? /* @__PURE__ */ P($t, { settings: n?.settings?.theme, children: [
+  return fe(() => {
+    n && t.ready();
+  }, [n, t]), n ? /* @__PURE__ */ P($t, { settings: n?.settings?.theme, children: [
     !r && /* @__PURE__ */ p(Oi, { items: n?.data.items, theme: n.settings?.theme }),
     r && /* @__PURE__ */ p(Ii, { items: n?.data.items, theme: n.settings?.theme })
   ] }) : null;
@@ -3380,7 +3401,7 @@ function ji({
   contract: e,
   hostElement: t
 }) {
-  return /* @__PURE__ */ p("div", { className: `reactedge-${ze}`, children: /* @__PURE__ */ p(
+  return /* @__PURE__ */ p("div", { className: `reactedge-${be}`, children: /* @__PURE__ */ p(
     _i,
     {
       ...t ? { hostElement: t } : {},
@@ -3403,7 +3424,7 @@ const Ai = ({ contract: e }) => {
 function Li({
   contract: e
 }) {
-  return /* @__PURE__ */ p("div", { className: `reactedge-${ze}`, children: /* @__PURE__ */ p(Ai, { contract: e }) });
+  return /* @__PURE__ */ p("div", { className: `reactedge-${be}`, children: /* @__PURE__ */ p(Ai, { contract: e }) });
 }
 export {
   Di as Widget,
