@@ -1,0 +1,20 @@
+{
+    "key": "MS10",
+    "images": [
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/m/s/ms10-blue_main_1.jpg",
+            "alt": "",
+            "role": "base"
+        },
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/m/s/ms10-blue_alt1_1.jpg",
+            "alt": "",
+            "role": "base"
+        },
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/m/s/ms10-blue_back_1.jpg",
+            "alt": "",
+            "role": "base"
+        }
+    ]
+}

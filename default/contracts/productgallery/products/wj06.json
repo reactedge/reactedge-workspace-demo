@@ -1,0 +1,20 @@
+{
+    "key": "WJ06",
+    "images": [
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/w/j/wj06-purple_main_1.jpg",
+            "alt": "",
+            "role": "base"
+        },
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/w/j/wj06-purple_alt1_1.jpg",
+            "alt": "",
+            "role": "base"
+        },
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/w/j/wj06-purple_back_1.jpg",
+            "alt": "",
+            "role": "base"
+        }
+    ]
+}

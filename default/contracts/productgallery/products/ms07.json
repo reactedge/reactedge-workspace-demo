@@ -1,0 +1,20 @@
+{
+    "key": "MS07",
+    "images": [
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/m/s/ms07-green_main_1.jpg",
+            "alt": "",
+            "role": "base"
+        },
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/m/s/ms07-green_alt1_1.jpg",
+            "alt": "",
+            "role": "base"
+        },
+        {
+            "src": "https://mageos-docker.magsite.co.uk/media/catalog/product/m/s/ms07-green_back_1.jpg",
+            "alt": "",
+            "role": "base"
+        }
+    ]
+}

@@ -1,0 +1,728 @@
+{
+    "entries": [
+        {
+            "key": "24-MB01",
+            "dataFile": "products/24-mb01.json"
+        },
+        {
+            "key": "24-MB04",
+            "dataFile": "products/24-mb04.json"
+        },
+        {
+            "key": "24-MB03",
+            "dataFile": "products/24-mb03.json"
+        },
+        {
+            "key": "24-MB05",
+            "dataFile": "products/24-mb05.json"
+        },
+        {
+            "key": "24-MB06",
+            "dataFile": "products/24-mb06.json"
+        },
+        {
+            "key": "24-MB02",
+            "dataFile": "products/24-mb02.json"
+        },
+        {
+            "key": "24-UB02",
+            "dataFile": "products/24-ub02.json"
+        },
+        {
+            "key": "24-WB01",
+            "dataFile": "products/24-wb01.json"
+        },
+        {
+            "key": "24-WB02",
+            "dataFile": "products/24-wb02.json"
+        },
+        {
+            "key": "24-WB05",
+            "dataFile": "products/24-wb05.json"
+        },
+        {
+            "key": "24-WB06",
+            "dataFile": "products/24-wb06.json"
+        },
+        {
+            "key": "24-WB03",
+            "dataFile": "products/24-wb03.json"
+        },
+        {
+            "key": "24-WB07",
+            "dataFile": "products/24-wb07.json"
+        },
+        {
+            "key": "24-WB04",
+            "dataFile": "products/24-wb04.json"
+        },
+        {
+            "key": "24-UG06",
+            "dataFile": "products/24-ug06.json"
+        },
+        {
+            "key": "24-UG07",
+            "dataFile": "products/24-ug07.json"
+        },
+        {
+            "key": "24-UG04",
+            "dataFile": "products/24-ug04.json"
+        },
+        {
+            "key": "24-UG02",
+            "dataFile": "products/24-ug02.json"
+        },
+        {
+            "key": "24-UG05",
+            "dataFile": "products/24-ug05.json"
+        },
+        {
+            "key": "24-UG01",
+            "dataFile": "products/24-ug01.json"
+        },
+        {
+            "key": "24-WG084",
+            "dataFile": "products/24-wg084.json"
+        },
+        {
+            "key": "24-WG088",
+            "dataFile": "products/24-wg088.json"
+        },
+        {
+            "key": "24-UG03",
+            "dataFile": "products/24-ug03.json"
+        },
+        {
+            "key": "24-MG04",
+            "dataFile": "products/24-mg04.json"
+        },
+        {
+            "key": "24-MG01",
+            "dataFile": "products/24-mg01.json"
+        },
+        {
+            "key": "24-MG03",
+            "dataFile": "products/24-mg03.json"
+        },
+        {
+            "key": "24-MG05",
+            "dataFile": "products/24-mg05.json"
+        },
+        {
+            "key": "24-MG02",
+            "dataFile": "products/24-mg02.json"
+        },
+        {
+            "key": "24-WG09",
+            "dataFile": "products/24-wg09.json"
+        },
+        {
+            "key": "24-WG01",
+            "dataFile": "products/24-wg01.json"
+        },
+        {
+            "key": "24-WG03",
+            "dataFile": "products/24-wg03.json"
+        },
+        {
+            "key": "24-WG02",
+            "dataFile": "products/24-wg02.json"
+        },
+        {
+            "key": "24-WG080",
+            "dataFile": "products/24-wg080.json"
+        },
+        {
+            "key": "24-WG085_Group",
+            "dataFile": "products/24-wg085_group.json"
+        },
+        {
+            "key": "MH01",
+            "dataFile": "products/mh01.json"
+        },
+        {
+            "key": "MH02",
+            "dataFile": "products/mh02.json"
+        },
+        {
+            "key": "MH03",
+            "dataFile": "products/mh03.json"
+        },
+        {
+            "key": "MH04",
+            "dataFile": "products/mh04.json"
+        },
+        {
+            "key": "MH05",
+            "dataFile": "products/mh05.json"
+        },
+        {
+            "key": "MH06",
+            "dataFile": "products/mh06.json"
+        },
+        {
+            "key": "MH07",
+            "dataFile": "products/mh07.json"
+        },
+        {
+            "key": "MH08",
+            "dataFile": "products/mh08.json"
+        },
+        {
+            "key": "MH09",
+            "dataFile": "products/mh09.json"
+        },
+        {
+            "key": "MH10",
+            "dataFile": "products/mh10.json"
+        },
+        {
+            "key": "MH11",
+            "dataFile": "products/mh11.json"
+        },
+        {
+            "key": "MH12",
+            "dataFile": "products/mh12.json"
+        },
+        {
+            "key": "MH13",
+            "dataFile": "products/mh13.json"
+        },
+        {
+            "key": "MJ01",
+            "dataFile": "products/mj01.json"
+        },
+        {
+            "key": "MJ02",
+            "dataFile": "products/mj02.json"
+        },
+        {
+            "key": "MJ04",
+            "dataFile": "products/mj04.json"
+        },
+        {
+            "key": "MJ07",
+            "dataFile": "products/mj07.json"
+        },
+        {
+            "key": "MJ08",
+            "dataFile": "products/mj08.json"
+        },
+        {
+            "key": "MJ09",
+            "dataFile": "products/mj09.json"
+        },
+        {
+            "key": "MJ10",
+            "dataFile": "products/mj10.json"
+        },
+        {
+            "key": "MJ11",
+            "dataFile": "products/mj11.json"
+        },
+        {
+            "key": "MJ06",
+            "dataFile": "products/mj06.json"
+        },
+        {
+            "key": "MJ03",
+            "dataFile": "products/mj03.json"
+        },
+        {
+            "key": "MJ12",
+            "dataFile": "products/mj12.json"
+        },
+        {
+            "key": "MS04",
+            "dataFile": "products/ms04.json"
+        },
+        {
+            "key": "MS05",
+            "dataFile": "products/ms05.json"
+        },
+        {
+            "key": "MS09",
+            "dataFile": "products/ms09.json"
+        },
+        {
+            "key": "MS11",
+            "dataFile": "products/ms11.json"
+        },
+        {
+            "key": "MS12",
+            "dataFile": "products/ms12.json"
+        },
+        {
+            "key": "MS03",
+            "dataFile": "products/ms03.json"
+        },
+        {
+            "key": "MS06",
+            "dataFile": "products/ms06.json"
+        },
+        {
+            "key": "MS01",
+            "dataFile": "products/ms01.json"
+        },
+        {
+            "key": "MS02",
+            "dataFile": "products/ms02.json"
+        },
+        {
+            "key": "MS10",
+            "dataFile": "products/ms10.json"
+        },
+        {
+            "key": "MS07",
+            "dataFile": "products/ms07.json"
+        },
+        {
+            "key": "MS08",
+            "dataFile": "products/ms08.json"
+        },
+        {
+            "key": "MT01",
+            "dataFile": "products/mt01.json"
+        },
+        {
+            "key": "MT02",
+            "dataFile": "products/mt02.json"
+        },
+        {
+            "key": "MT03",
+            "dataFile": "products/mt03.json"
+        },
+        {
+            "key": "MT04",
+            "dataFile": "products/mt04.json"
+        },
+        {
+            "key": "MT05",
+            "dataFile": "products/mt05.json"
+        },
+        {
+            "key": "MT06",
+            "dataFile": "products/mt06.json"
+        },
+        {
+            "key": "MT07",
+            "dataFile": "products/mt07.json"
+        },
+        {
+            "key": "MT08",
+            "dataFile": "products/mt08.json"
+        },
+        {
+            "key": "MT09",
+            "dataFile": "products/mt09.json"
+        },
+        {
+            "key": "MT10",
+            "dataFile": "products/mt10.json"
+        },
+        {
+            "key": "MT11",
+            "dataFile": "products/mt11.json"
+        },
+        {
+            "key": "MT12",
+            "dataFile": "products/mt12.json"
+        },
+        {
+            "key": "MP01",
+            "dataFile": "products/mp01.json"
+        },
+        {
+            "key": "MP02",
+            "dataFile": "products/mp02.json"
+        },
+        {
+            "key": "MP03",
+            "dataFile": "products/mp03.json"
+        },
+        {
+            "key": "MP04",
+            "dataFile": "products/mp04.json"
+        },
+        {
+            "key": "MP05",
+            "dataFile": "products/mp05.json"
+        },
+        {
+            "key": "MP06",
+            "dataFile": "products/mp06.json"
+        },
+        {
+            "key": "MP07",
+            "dataFile": "products/mp07.json"
+        },
+        {
+            "key": "MP08",
+            "dataFile": "products/mp08.json"
+        },
+        {
+            "key": "MP09",
+            "dataFile": "products/mp09.json"
+        },
+        {
+            "key": "MP10",
+            "dataFile": "products/mp10.json"
+        },
+        {
+            "key": "MP11",
+            "dataFile": "products/mp11.json"
+        },
+        {
+            "key": "MP12",
+            "dataFile": "products/mp12.json"
+        },
+        {
+            "key": "MSH01",
+            "dataFile": "products/msh01.json"
+        },
+        {
+            "key": "MSH02",
+            "dataFile": "products/msh02.json"
+        },
+        {
+            "key": "MSH03",
+            "dataFile": "products/msh03.json"
+        },
+        {
+            "key": "MSH04",
+            "dataFile": "products/msh04.json"
+        },
+        {
+            "key": "MSH05",
+            "dataFile": "products/msh05.json"
+        },
+        {
+            "key": "MSH06",
+            "dataFile": "products/msh06.json"
+        },
+        {
+            "key": "MSH07",
+            "dataFile": "products/msh07.json"
+        },
+        {
+            "key": "MSH08",
+            "dataFile": "products/msh08.json"
+        },
+        {
+            "key": "MSH09",
+            "dataFile": "products/msh09.json"
+        },
+        {
+            "key": "MSH10",
+            "dataFile": "products/msh10.json"
+        },
+        {
+            "key": "MSH11",
+            "dataFile": "products/msh11.json"
+        },
+        {
+            "key": "MSH12",
+            "dataFile": "products/msh12.json"
+        },
+        {
+            "key": "WH01",
+            "dataFile": "products/wh01.json"
+        },
+        {
+            "key": "WH02",
+            "dataFile": "products/wh02.json"
+        },
+        {
+            "key": "WH03",
+            "dataFile": "products/wh03.json"
+        },
+        {
+            "key": "WH04",
+            "dataFile": "products/wh04.json"
+        },
+        {
+            "key": "WH05",
+            "dataFile": "products/wh05.json"
+        },
+        {
+            "key": "WH06",
+            "dataFile": "products/wh06.json"
+        },
+        {
+            "key": "WH07",
+            "dataFile": "products/wh07.json"
+        },
+        {
+            "key": "WH08",
+            "dataFile": "products/wh08.json"
+        },
+        {
+            "key": "WH09",
+            "dataFile": "products/wh09.json"
+        },
+        {
+            "key": "WH10",
+            "dataFile": "products/wh10.json"
+        },
+        {
+            "key": "WH11",
+            "dataFile": "products/wh11.json"
+        },
+        {
+            "key": "WH12",
+            "dataFile": "products/wh12.json"
+        },
+        {
+            "key": "WJ01",
+            "dataFile": "products/wj01.json"
+        },
+        {
+            "key": "WJ02",
+            "dataFile": "products/wj02.json"
+        },
+        {
+            "key": "WJ03",
+            "dataFile": "products/wj03.json"
+        },
+        {
+            "key": "WJ04",
+            "dataFile": "products/wj04.json"
+        },
+        {
+            "key": "WJ05",
+            "dataFile": "products/wj05.json"
+        },
+        {
+            "key": "WJ07",
+            "dataFile": "products/wj07.json"
+        },
+        {
+            "key": "WJ08",
+            "dataFile": "products/wj08.json"
+        },
+        {
+            "key": "WJ09",
+            "dataFile": "products/wj09.json"
+        },
+        {
+            "key": "WJ10",
+            "dataFile": "products/wj10.json"
+        },
+        {
+            "key": "WJ11",
+            "dataFile": "products/wj11.json"
+        },
+        {
+            "key": "WJ06",
+            "dataFile": "products/wj06.json"
+        },
+        {
+            "key": "WJ12",
+            "dataFile": "products/wj12.json"
+        },
+        {
+            "key": "WS02",
+            "dataFile": "products/ws02.json"
+        },
+        {
+            "key": "WS03",
+            "dataFile": "products/ws03.json"
+        },
+        {
+            "key": "WS04",
+            "dataFile": "products/ws04.json"
+        },
+        {
+            "key": "WS06",
+            "dataFile": "products/ws06.json"
+        },
+        {
+            "key": "WS07",
+            "dataFile": "products/ws07.json"
+        },
+        {
+            "key": "WS08",
+            "dataFile": "products/ws08.json"
+        },
+        {
+            "key": "WS09",
+            "dataFile": "products/ws09.json"
+        },
+        {
+            "key": "WS10",
+            "dataFile": "products/ws10.json"
+        },
+        {
+            "key": "WS11",
+            "dataFile": "products/ws11.json"
+        },
+        {
+            "key": "WS12",
+            "dataFile": "products/ws12.json"
+        },
+        {
+            "key": "WS01",
+            "dataFile": "products/ws01.json"
+        },
+        {
+            "key": "WS05",
+            "dataFile": "products/ws05.json"
+        },
+        {
+            "key": "WB01",
+            "dataFile": "products/wb01.json"
+        },
+        {
+            "key": "WB02",
+            "dataFile": "products/wb02.json"
+        },
+        {
+            "key": "WB03",
+            "dataFile": "products/wb03.json"
+        },
+        {
+            "key": "WB04",
+            "dataFile": "products/wb04.json"
+        },
+        {
+            "key": "WB05",
+            "dataFile": "products/wb05.json"
+        },
+        {
+            "key": "WT01",
+            "dataFile": "products/wt01.json"
+        },
+        {
+            "key": "WT02",
+            "dataFile": "products/wt02.json"
+        },
+        {
+            "key": "WT03",
+            "dataFile": "products/wt03.json"
+        },
+        {
+            "key": "WT04",
+            "dataFile": "products/wt04.json"
+        },
+        {
+            "key": "WT05",
+            "dataFile": "products/wt05.json"
+        },
+        {
+            "key": "WT06",
+            "dataFile": "products/wt06.json"
+        },
+        {
+            "key": "WT07",
+            "dataFile": "products/wt07.json"
+        },
+        {
+            "key": "WT08",
+            "dataFile": "products/wt08.json"
+        },
+        {
+            "key": "WT09",
+            "dataFile": "products/wt09.json"
+        },
+        {
+            "key": "WP01",
+            "dataFile": "products/wp01.json"
+        },
+        {
+            "key": "WP02",
+            "dataFile": "products/wp02.json"
+        },
+        {
+            "key": "WP03",
+            "dataFile": "products/wp03.json"
+        },
+        {
+            "key": "WP04",
+            "dataFile": "products/wp04.json"
+        },
+        {
+            "key": "WP05",
+            "dataFile": "products/wp05.json"
+        },
+        {
+            "key": "WP06",
+            "dataFile": "products/wp06.json"
+        },
+        {
+            "key": "WP07",
+            "dataFile": "products/wp07.json"
+        },
+        {
+            "key": "WP08",
+            "dataFile": "products/wp08.json"
+        },
+        {
+            "key": "WP09",
+            "dataFile": "products/wp09.json"
+        },
+        {
+            "key": "WP10",
+            "dataFile": "products/wp10.json"
+        },
+        {
+            "key": "WP11",
+            "dataFile": "products/wp11.json"
+        },
+        {
+            "key": "WP12",
+            "dataFile": "products/wp12.json"
+        },
+        {
+            "key": "WP13",
+            "dataFile": "products/wp13.json"
+        },
+        {
+            "key": "WSH01",
+            "dataFile": "products/wsh01.json"
+        },
+        {
+            "key": "WSH02",
+            "dataFile": "products/wsh02.json"
+        },
+        {
+            "key": "WSH03",
+            "dataFile": "products/wsh03.json"
+        },
+        {
+            "key": "WSH04",
+            "dataFile": "products/wsh04.json"
+        },
+        {
+            "key": "WSH05",
+            "dataFile": "products/wsh05.json"
+        },
+        {
+            "key": "WSH06",
+            "dataFile": "products/wsh06.json"
+        },
+        {
+            "key": "WSH07",
+            "dataFile": "products/wsh07.json"
+        },
+        {
+            "key": "WSH08",
+            "dataFile": "products/wsh08.json"
+        },
+        {
+            "key": "WSH09",
+            "dataFile": "products/wsh09.json"
+        },
+        {
+            "key": "WSH10",
+            "dataFile": "products/wsh10.json"
+        },
+        {
+            "key": "WSH11",
+            "dataFile": "products/wsh11.json"
+        },
+        {
+            "key": "WSH12",
+            "dataFile": "products/wsh12.json"
+        }
+    ]
+}
