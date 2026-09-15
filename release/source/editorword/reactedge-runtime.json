@@ -1,15 +1,12 @@
 {
   "integrations": {
     "magentoGraphql": {
-      "api": "https://mageos-docker.magsite.co.uk/graphql"
-    },
-    "googleMaps": {
-      "apiKey": "AIzaSyBXDMg2bxjoLBCi7HwS_3WyHpYYOcjX3iY",
-      "placeId": "ChIJF3wtymMX1I0RlV-deLj6JSE"
+      "api": "https://mageos-docker.magsite.fr/graphql"
     }
   },
   "context": {
-    "storeCode": "default",
-    "sku": "WJ12"
+    "storeCode": "magento_fr_store",
+    "sku": "WJ12",
+    "category": "tops-men"
   }
 }
