@@ -1,9 +1,9 @@
 {
   "id": "editorword",
   "widget": "editorword",
-  "src": "widget-editorword@zwmMxb9VftcNbG5Ce6JbNZciO2VEzpWYfe2_A-Vv2wk.iife.js",
+  "src": "widget-editorword@4kKqGAWpuuXN5EVwHPIxOZUX-2pK4K9XYE6rrTYMm6k.iife.js",
+  "css": "widget-editorword.css",
   "ssr": {
-    "views": {},
     "css": null,
     "strategy": "disabled"
   },
@@ -15,5 +15,5 @@
       "colour": "#333"
     }
   },
-  "contractFile": "default.json"
+  "contractFile": "release.json"
 }

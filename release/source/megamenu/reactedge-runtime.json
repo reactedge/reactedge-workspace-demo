@@ -1,14 +1,11 @@
 {
   "integrations": {
     "magentoGraphql": {
-      "api": "https://mageos-docker.magsite.co.uk/graphql"
-    },
-    "intentApi": {
-      "baseUrl": "http://localhost:3001"
+      "api": "https://mageos-docker.magsite.fr/graphql"
     }
   },
   "context": {
-    "storeCode": "default",
+    "storeCode": "magento_fr_store",
     "sku": "WJ12",
     "category": "tops-men"
   }
