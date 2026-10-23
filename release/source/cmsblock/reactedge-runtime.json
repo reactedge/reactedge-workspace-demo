@@ -1,0 +1,15 @@
+{
+  "integrations": {
+    "magentoGraphql": {
+      "api": "https://mageos-docker.magsite.co.uk/graphql"
+    }
+    ,"cmsblockApi": {
+      "api": "http://127.0.0.1:4191"
+    }
+  },
+  "context": {
+    "storeCode": "default",
+    "sku": "WJ12",
+    "category": "tops-men"
+  }
+}
